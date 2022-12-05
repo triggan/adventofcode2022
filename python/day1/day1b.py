@@ -3,17 +3,14 @@
 inputfile = open('input.txt','r')
 
 def topThree(cvalue, clist):
-    toReturn = []
-    print(cvalue)
+    toReturn = clist
     for index, x in enumerate(clist):
         if cvalue > x:
-            bottomlist = clist[index+1:]
+            bottomlist = clist[index:]
             if len(bottomlist) > 0:
-                if bottomlist[len(bottomlist)-1] > 0:
-                    bottomlist.pop()
+                bottomlist.pop()
             toReturn = clist[:index] + [cvalue] + bottomlist
             break
-    print(clist)
     return toReturn
 
 csum = 0
@@ -27,3 +24,4 @@ for line in inputfile:
 
 inputfile.close()
 print('The largest calorie counts are: ', clist)
+print('Sum of calories: ', sum(clist))
