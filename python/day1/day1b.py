@@ -1,4 +1,4 @@
-## Advent of Code - Day 1: Calorie Counting
+## Advent of Code - Day 1 Part 2: Calorie Counting
 
 inputfile = open('input.txt','r')
 
@@ -23,5 +23,5 @@ for line in inputfile:
         csum = 0
 
 inputfile.close()
-print('The largest calorie counts are: ', clist)
+print('The largest 3 calorie counts are: ', clist)
 print('Sum of calories: ', sum(clist))
